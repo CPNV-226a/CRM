@@ -36,6 +36,8 @@ namespace CRM
             _nationality = nationality;
             _email = email;
             _pathToImg = pathToImg;
+            _creationDate = DateTime.Now;
+            _lastUpdate = _creationDate;
         }
 
         /// <summary>
