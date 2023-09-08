@@ -16,7 +16,6 @@ namespace CRM
         private void FrmContact_Load(object sender, EventArgs e)
         {
             this.CreateContact();
-            this.UpdateGui();
         }
 
         private void CreateContact()
@@ -29,6 +28,7 @@ namespace CRM
             this.Text += " " + _contact.Name;
             this.textBoxName.Text = _contact.Name;
             this.textBoxFirstname.Text = _contact.Firstname;
+            this.textBoxDateOfBirth.Text = _contact.DateOfBirth.ToString();
             this.textBoxNationality.Text = _contact.Nationality;
             this.textBoxEmail.Text = _contact.Email;
             //TODO calculate resource name

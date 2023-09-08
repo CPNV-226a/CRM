@@ -79,7 +79,7 @@ namespace CRM
         {
             get
             {
-                throw new IndexOutOfRangeException();
+                return _dateOfBirth;
             }
         }
 
