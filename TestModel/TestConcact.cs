@@ -57,19 +57,21 @@ namespace CRM
 
             //then
             Assert.AreEqual(expectedNewName, actualName);
+            Assert.AreNotEqual(_expectedContact.CreationDate, _expectedContact.LastUpdate);
         }
 
         [Test]
-        public void LastUpdate_UpdateName_GetNewValue()
+        public void Firstname_UpdateValue_GetNewValue()
         {
             //given
             //refere to Setup method
-            string expectedNewName = "My New Name";
-            _expectedContact.Name = expectedNewName;
+            string expectedNewFirstname = "My New Firstname";
+            _expectedContact.Firstname = expectedNewFirstname;
 
             //when
-
+            
             //then
+            Assert.AreEqual(expectedNewFirstname, _expectedContact.Firstname);
             Assert.AreNotEqual(_expectedContact.CreationDate, _expectedContact.LastUpdate);
         }
     }

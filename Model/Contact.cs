@@ -30,7 +30,12 @@ namespace CRM
         #region public methods
         public Contact(string name, string firstname, DateTime dateOfBirth, string nationality, string email, string pathToImg = "/")
         {
-            throw new NotImplementedException();
+            _name = name;
+            _firstname = firstname;
+            _dateOfBirth = dateOfBirth;
+            _nationality = nationality;
+            _email = email;
+            _pathToImg = pathToImg;
         }
 
         /// <summary>
@@ -40,11 +45,12 @@ namespace CRM
         {
             get
             {
-                throw new NotImplementedException();
+                return _name;
             }
             set
             {
-                throw new NotImplementedException();
+                _name = value;
+                this.UpdateLastUpdate();
             }
         }
 
@@ -55,7 +61,12 @@ namespace CRM
         {
             get
             {
-                throw new NotImplementedException();
+                return _firstname;
+            }
+            set
+            {
+                _firstname= value;
+                this.UpdateLastUpdate();
             }
         }
 
@@ -66,11 +77,7 @@ namespace CRM
         {
             get
             {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
+                return _dateOfBirth;
             }
         }
 
@@ -81,11 +88,7 @@ namespace CRM
         {
             get
             {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
+                return _nationality;
             }
         }
 
@@ -96,11 +99,7 @@ namespace CRM
         {
             get
             {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
+                return _email;
             }
         }
 
@@ -113,11 +112,7 @@ namespace CRM
         {
             get
             {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
+                return _pathToImg;
             }
         }
 
@@ -128,7 +123,7 @@ namespace CRM
         {
             get
             {
-                throw new NotImplementedException();
+                return _creationDate;
             }
         }
 
@@ -140,7 +135,7 @@ namespace CRM
         {
             get
             {
-                throw new NotImplementedException();
+                return _lastUpdate;
             }
         }
         #endregion public methods
@@ -148,7 +143,7 @@ namespace CRM
         #region private methods
         private void UpdateLastUpdate()
         {
-            throw new NotImplementedException();
+            _lastUpdate = DateTime.Now;
         }
         #endregion private methods
     }
