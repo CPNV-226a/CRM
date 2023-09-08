@@ -28,16 +28,49 @@ namespace CRM
         }
 
         [Test]
-        public void Name_JustAfterInstantiation_GetValue()
+        public void AllProperties_JustAfterInstantiation_GetValues()
         {
             //given
             //refere to Setup method
 
             //when
+
+            //then
+            Assert.AreEqual(_expectedContact.Name, _expectedName);
+            Assert.AreEqual(_expectedContact.Firstname, _expectedFirstname);
+            Assert.AreEqual(_expectedContact.DateOfBirth, _expectedDateOfBirth);
+            Assert.AreEqual(_expectedContact.Nationality, _expectedNationality);
+            Assert.AreEqual(_expectedContact.Email, _expectedEmail);
+            Assert.AreEqual(_expectedContact.PathToImg, _expectedPathToImg);
+        }
+
+        [Test]
+        public void Name_UpdateValue_GetNewValue()
+        {
+            //given
+            //refere to Setup method
+            string expectedNewName = "My New Name";
+            _expectedContact.Name = expectedNewName;
+
+            //when
             string actualName = _expectedContact.Name;
 
             //then
-            Assert.AreEqual(_expectedName, actualName);
+            Assert.AreEqual(expectedNewName, actualName);
+        }
+
+        [Test]
+        public void LastUpdate_UpdateName_GetNewValue()
+        {
+            //given
+            //refere to Setup method
+            string expectedNewName = "My New Name";
+            _expectedContact.Name = expectedNewName;
+
+            //when
+
+            //then
+            Assert.AreNotEqual(_expectedContact.CreationDate, _expectedContact.LastUpdate);
         }
     }
 }

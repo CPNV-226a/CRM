@@ -42,6 +42,10 @@ namespace CRM
             {
                 throw new NotImplementedException();
             }
+            set
+            {
+                throw new NotImplementedException();
+            }
         }
 
         /// <summary>
