@@ -29,7 +29,6 @@ namespace CRM
             this.Text += " " + _contact.Name;
             this.textBoxName.Text = _contact.Name;
             this.textBoxFirstname.Text = _contact.Firstname;
-            this.textBoxDateOfBirth.Text = _contact.DateOfBirth.ToString("dd-MMM-yyy");
             this.textBoxNationality.Text = _contact.Nationality;
             this.textBoxEmail.Text = _contact.Email;
             //TODO calculate resource name
