@@ -49,8 +49,7 @@ namespace CRM
             }
             set
             {
-                _name = value;
-                this.UpdateLastUpdate();
+                throw new NotImplementedException();
             }
         }
 
@@ -65,8 +64,7 @@ namespace CRM
             }
             set
             {
-                _firstname= value;
-                this.UpdateLastUpdate();
+                throw new NotImplementedException();
             }
         }
 
@@ -77,7 +75,7 @@ namespace CRM
         {
             get
             {
-                return _dateOfBirth;
+                throw new NotImplementedException();
             }
         }
 
@@ -143,7 +141,7 @@ namespace CRM
         #region private methods
         private void UpdateLastUpdate()
         {
-            _lastUpdate = DateTime.Now;
+            throw new NotImplementedException();
         }
         #endregion private methods
     }
