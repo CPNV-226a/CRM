@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace CRM
 {
-    public partial class FrmContact : Form
+    public partial class FrmContact
     {
         #region private attributes
         private Contact _contact = null;
@@ -16,6 +16,7 @@ namespace CRM
         private void FrmContact_Load(object sender, EventArgs e)
         {
             this.CreateContact();
+            this.UpdateGui();
         }
 
         private void CreateContact()
