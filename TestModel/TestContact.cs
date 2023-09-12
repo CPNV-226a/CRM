@@ -74,5 +74,20 @@ namespace CRM
             Assert.AreEqual(expectedNewFirstname, _expectedContact.Firstname);
             Assert.AreNotEqual(_expectedContact.CreationDate, _expectedContact.LastUpdate);
         }
+
+        [Test]
+        public void DateOfBirth_UpdateValue_GetNewValue()
+        {
+            //given
+            //refere to Setup method
+            DateTime expectedNewBirthday = new DateTime(2020,12,01);
+            _expectedContact.DateOfBirth = expectedNewBirthday;
+
+            //when
+
+            //then
+            Assert.AreEqual(expectedNewBirthday, _expectedContact.DateOfBirth);
+            Assert.AreNotEqual(_expectedContact.CreationDate, _expectedContact.LastUpdate);
+        }
     }
 }

@@ -35,9 +35,7 @@ namespace CRM
             //TODO calculate resource name
             this.pictureBox1.Image = global::_226TestApp.Properties.Resources.MathieuRicard;
             this.labelCreationDate.Text = "Créé le :" + _contact.CreationDate;
-            this.labelLastUpdate.Text = "Mis à jour le :" + _contact.LastUpdate;
-
-            
+            this.labelLastUpdate.Text = "Mis à jour le :" + _contact.LastUpdate;            
         }
     }
 }
