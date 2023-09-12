@@ -14,4 +14,8 @@
     <None Remove="TestModel\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="CrmBusiness.xml" />
+  </ItemGroup>
+
 </Project>
