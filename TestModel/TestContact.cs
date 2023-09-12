@@ -89,5 +89,20 @@ namespace CRM
             Assert.AreEqual(expectedNewBirthday, _expectedContact.DateOfBirth);
             Assert.AreNotEqual(_expectedContact.CreationDate, _expectedContact.LastUpdate);
         }
+
+        [Test]
+        public void Nationality_UpdateValue_GetNewValue()
+        {
+            //given
+            //refere to Setup method
+            string expectedNewNationality = "My New Nationality";
+            _expectedContact.Nationality = expectedNewNationality;
+
+            //when
+
+            //then
+            Assert.AreEqual(expectedNewNationality, _expectedContact.Nationality);
+            Assert.AreNotEqual(_expectedContact.CreationDate, _expectedContact.LastUpdate);
+        }
     }
 }
