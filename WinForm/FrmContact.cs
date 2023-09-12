@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace CRM
 {
-    public partial class FrmContact
+    public partial class FrmContact : Form
     {
         #region private attributes
         private Contact _contact = null;
