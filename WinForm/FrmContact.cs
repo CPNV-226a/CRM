@@ -36,6 +36,8 @@ namespace CRM
             this.pictureBox1.Image = global::_226TestApp.Properties.Resources.MathieuRicard;
             this.labelCreationDate.Text = "Créé le :" + _contact.CreationDate;
             this.labelLastUpdate.Text = "Mis à jour le :" + _contact.LastUpdate;
+
+            
         }
     }
 }

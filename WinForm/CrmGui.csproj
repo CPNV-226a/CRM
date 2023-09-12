@@ -5,6 +5,7 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <RootNamespace>_226TestApp</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

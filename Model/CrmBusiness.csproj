@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>C:\Users\nicolas.glassey\MyDevs\CPNV\226\CRM\Model\CrmBusiness.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
