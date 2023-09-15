@@ -5,16 +5,20 @@ namespace CRM
 {
     public class AddressBook
     {
+        #region private attributs
+        private List<Contact> _contacts = new List<Contact>();
+        #endregion private attibuts
+
         public void AddContact(Contact contactToAdd)
         {
-            throw new NotImplementedException();
+            _contacts.Add(contactToAdd);
         }
 
         public List<Contact> Contacts
         {
             get
             {
-                throw new NotImplementedException();
+                return _contacts;
             }
         }
     }

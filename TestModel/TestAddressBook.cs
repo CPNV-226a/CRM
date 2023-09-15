@@ -26,7 +26,6 @@ namespace CRM
 
             //then
             Assert.AreEqual(1, _addressBook.Contacts.Count);
-
         }
     }
 }
