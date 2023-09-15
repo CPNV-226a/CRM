@@ -98,7 +98,7 @@ namespace CRM
             }
             set
             {
-                _nationality = value;
+                _name = value;
             }
         }
 
@@ -113,7 +113,7 @@ namespace CRM
             }
             set
             {
-                _email = value;
+                Email = value;
             }
         }
 
