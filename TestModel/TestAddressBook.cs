@@ -16,7 +16,7 @@ namespace CRM
         }
 
         [Test]
-        public void Contacts_AddOneContact_GetContacts()
+        public void Contacts_AddOneContact_GetContact()
         {
             //given
             Contact gauthier = new Contact("Gauthier", "Jean-Paul", new DateTime(2020, 12, 16),"espagnole", "jp@gauthier.com");
