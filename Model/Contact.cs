@@ -81,6 +81,10 @@ namespace CRM
             {
                 return _dateOfBirth;
             }
+            set
+            {
+                _dateOfBirth = value;
+            }
         }
 
         /// <summary>
@@ -92,6 +96,10 @@ namespace CRM
             {
                 return _nationality;
             }
+            set
+            {
+                _nationality = value;
+            }
         }
 
         /// <summary>
@@ -102,6 +110,10 @@ namespace CRM
             get
             {
                 return _email;
+            }
+            set
+            {
+                _email = value;
             }
         }
 
