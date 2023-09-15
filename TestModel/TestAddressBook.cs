@@ -25,7 +25,7 @@ namespace CRM
             _addressBook.AddContact(gauthier);
 
             //then
-            Assert.AreEqual(1, _addressBook.Contacts.Count());
+            Assert.AreEqual(1, _addressBook.Contacts.Count);
 
         }
     }

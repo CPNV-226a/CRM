@@ -3,7 +3,7 @@ using System;
 
 namespace CRM
 {
-    public class Tests
+    public class TestContact
     {
         #region private attributes
         private Contact? _expectedContact;
