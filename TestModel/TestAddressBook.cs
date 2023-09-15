@@ -58,7 +58,7 @@ namespace CRM
         }
 
         [Test]
-        public void Exists_ContactExists_GetContact()
+        public void DoesExists_ContactExists_GetContact()
         {
             //given
             Contact astier = new Contact("Astier", "Alexandre", new DateTime(1976, 05, 12), "française", "alex@astier.fr");
