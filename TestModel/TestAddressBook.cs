@@ -74,7 +74,6 @@ namespace CRM
         [Test]
         public void AddContacts_DuplicateFound_ThrowException()
         {
-            //https://docs.nunit.org/articles/nunit/writing-tests/assertions/classic-assertions/Assert.Throws.html
             //given
             Contact gauthier = new Contact("Gauthier", "Jean-Paul", new DateTime(2020, 12, 16), "espagnole", "jp@gauthier.com");
             _addressBook.AddContacts(new List<Contact> { gauthier });
@@ -105,7 +104,6 @@ namespace CRM
         [Test]
         public void RemoveContacts_ContactDoesNotExist_ThrowException()
         {
-            //https://docs.nunit.org/articles/nunit/writing-tests/assertions/classic-assertions/Assert.Throws.html
             //given
             Contact astier = new Contact("Astier", "Alexandre", new DateTime(1976, 05, 12), "française", "alex@astier.fr");
             Contact gauthier = new Contact("Gauthier", "Jean-Paul", new DateTime(2020, 12, 16), "espagnole", "jp@gauthier.com");
@@ -118,6 +116,52 @@ namespace CRM
 
             //then
             //Exception thrown
+        }
+
+        [Test]
+        public void RemoveContacts_RemoveAllContacts_AdressBookEmpty()
+        {
+            //given
+            Contact astier = new Contact("Astier", "Alexandre", new DateTime(1976, 05, 12), "française", "alex@astier.fr");
+            Contact gauthier = new Contact("Gauthier", "Jean-Paul", new DateTime(2020, 12, 16), "espagnole", "jp@gauthier.com");
+            _addressBook.AddContacts(new List<Contact> { astier });
+
+            //when
+            //when
+            _addressBook.Remove();
+
+            //then
+            Assert.AreEqual(1, _addressBook.Contacts.Count);
+        }
+
+        [Test]
+        public void Constructor_WhitContacts_AdressBookFilled()
+        {
+            //given
+            Contact astier = new Contact("Astier", "Alexandre", new DateTime(1976, 05, 12), "française", "alex@astier.fr");
+            Contact gauthier = new Contact("Gauthier", "Jean-Paul", new DateTime(2020, 12, 16), "espagnole", "jp@gauthier.com");
+
+            //when
+            //when
+            _addressBook = new AddressBook((new List<Contact> { astier, gauthier }));
+
+            //then
+            Assert.AreEqual(1, _addressBook.Contacts.Count);
+        }
+
+        [Test]
+        public void Constructor_WhitContactsDuplicateFound_ThrowException()
+        {
+            //given
+            Contact astier = new Contact("Astier", "Alexandre", new DateTime(1976, 05, 12), "française", "alex@astier.fr");
+            Contact gauthier = new Contact("Gauthier", "Jean-Paul", new DateTime(2020, 12, 16), "espagnole", "jp@gauthier.com");
+            Contact wallas = new Contact("Wallas", "Marcellus", new DateTime(1954, 04, 16), "espagnole", "jp@gauthier.com");
+
+            //when
+            _addressBook = new AddressBook((new List<Contact> { astier, gauthier, gauthier, wallas }));
+
+            //then
+            Assert.AreEqual(1, _addressBook.Contacts.Count);
         }
     }
 }
