@@ -94,7 +94,7 @@ namespace CRM
             _addressBook.AddContacts(new List<Contact> { gauthier, astier });
 
             //when
-            _addressBook.Remove(gauthier);
+            _addressBook.RemoveContacts(gauthier);
 
             //then
             Assert.IsTrue(_addressBook.DoesExist(astier));
@@ -110,8 +110,7 @@ namespace CRM
             _addressBook.AddContacts(new List<Contact> { astier });
 
             //when
-            //when
-            Assert.Throws<RemoveFailedException>(() => _addressBook.Remove(gauthier));
+            Assert.Throws<RemoveFailedException>(() => _addressBook.RemoveContacts(gauthier));
 
 
             //then
@@ -127,26 +126,24 @@ namespace CRM
             _addressBook.AddContacts(new List<Contact> { astier });
 
             //when
-            //when
-            _addressBook.Remove();
+            _addressBook.RemoveContacts();
 
             //then
-            Assert.AreEqual(1, _addressBook.Contacts.Count);
+            Assert.AreEqual(0, _addressBook.Contacts.Count);
         }
 
         [Test]
-        public void Constructor_WhitContacts_AdressBookFilled()
+        public void Constructor_WhithContacts_AdressBookFilled()
         {
             //given
             Contact astier = new Contact("Astier", "Alexandre", new DateTime(1976, 05, 12), "française", "alex@astier.fr");
             Contact gauthier = new Contact("Gauthier", "Jean-Paul", new DateTime(2020, 12, 16), "espagnole", "jp@gauthier.com");
 
             //when
-            //when
             _addressBook = new AddressBook((new List<Contact> { astier, gauthier }));
 
             //then
-            Assert.AreEqual(1, _addressBook.Contacts.Count);
+            Assert.AreEqual(2, _addressBook.Contacts.Count);
         }
 
         [Test]
@@ -158,10 +155,10 @@ namespace CRM
             Contact wallas = new Contact("Wallas", "Marcellus", new DateTime(1954, 04, 16), "espagnole", "jp@gauthier.com");
 
             //when
-            _addressBook = new AddressBook((new List<Contact> { astier, gauthier, gauthier, wallas }));
+            Assert.Throws<ContactAlreadyExist>(() => new AddressBook((new List<Contact> { astier, gauthier })));
 
             //then
-            Assert.AreEqual(1, _addressBook.Contacts.Count);
+            //Exception thrown
         }
     }
 }
