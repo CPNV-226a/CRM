@@ -96,7 +96,7 @@ namespace CRM
             _addressBook.AddContacts(new List<Contact> { gauthier, astier });
 
             //when
-            _addresseBook.Remove(gauthier);
+            _addressBook.Remove(gauthier);
 
             //then
             Assert.IsTrue(_addressBook.DoesExist(astier));
