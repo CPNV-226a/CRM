@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using static CRM.AddressBook;
 
 namespace CRM
 {
@@ -80,7 +81,7 @@ namespace CRM
             _addressBook.AddContacts(new List<Contact> { gauthier });
 
             //when
-            //Assert.Throws<ContactAlreadyExist>(() => _addressBook.AddContacts(new List<Contact> { gauthier }));
+            Assert.Throws<ContactAlreadyExist>(() => _addressBook.AddContacts(new List<Contact> { gauthier }));
 
             //then
             //Exception thrown
