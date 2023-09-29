@@ -69,7 +69,7 @@ namespace CRM
             _expectedContact.Firstname = expectedNewFirstname;
 
             //when
-            
+
             //then
             Assert.AreEqual(expectedNewFirstname, _expectedContact.Firstname);
             Assert.AreNotEqual(_expectedContact.CreationDate, _expectedContact.LastUpdate);
@@ -80,7 +80,7 @@ namespace CRM
         {
             //given
             //refere to Setup method
-            DateTime expectedNewBirthday = new DateTime(2020,12,01);
+            DateTime expectedNewBirthday = new DateTime(2020, 12, 01);
             _expectedContact.DateOfBirth = expectedNewBirthday;
 
             //when

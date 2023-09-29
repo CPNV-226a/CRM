@@ -84,6 +84,7 @@ namespace CRM
             set
             {
                 _dateOfBirth = value;
+                this.UpdateLastUpdate();
             }
         }
 
@@ -98,7 +99,8 @@ namespace CRM
             }
             set
             {
-                _name = value;
+                _nationality = value;
+                this.UpdateLastUpdate();
             }
         }
 
@@ -113,7 +115,8 @@ namespace CRM
             }
             set
             {
-                Email = value;
+                _email = value;
+                this.UpdateLastUpdate();
             }
         }
 
@@ -127,6 +130,11 @@ namespace CRM
             get
             {
                 return _pathToImg;
+            }
+            set
+            {
+                _pathToImg = value;
+                this.UpdateLastUpdate();
             }
         }
 
